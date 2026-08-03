@@ -26,3 +26,7 @@ jobs:
       # 단계의 이름(name: 화면에 보일 이름, run: 실제 실행할 명령어)
       - name: 인사하기
         run: echo "Hello, Actions! TaskFlow의 첫 워크 플로우입니다."
+      - name: 러너 정보 보기
+        run: |
+          echo "러너 OS: $RUNNER_OS"
+          uname -a

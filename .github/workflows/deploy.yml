@@ -1,22 +1,22 @@
-name: Deploy Actions
+# name: Deploy Actions
 
-on: push:
-  branches: [main]
+# on: push:
+#   branches: [main]
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 코드 내려받기
-        uses: actions/checkout@v6
-        with:
-          node-version: "20"
-      - name: 테스트 실행
-        run: npm test
+# jobs:
+#   test:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: 코드 내려받기
+#         uses: actions/checkout@v6
+#         with:
+#           node-version: "20"
+#       - name: 테스트 실행
+#         run: npm test
   
-  deploy:
-    needs: test # [text, lint]
-    runs-on: ubuntu-latest
-    steps:
-      - name: 배포하기
-        run: echo "배포 중"
+#   deploy:
+#     needs: test # [text, lint]
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: 배포하기
+#         run: echo "배포 중"
