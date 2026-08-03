@@ -1,0 +1,17 @@
+# workflow 이름
+name: Hello Actions
+
+# 실행 시점
+on: push
+
+# 이 workflow가 가진 잡들의 목록
+jobs:
+  # 잡의 이름(식별자)
+  greet:
+    # 러너 종류(어디서 실행할지)
+    runs-on: ubuntu-latest
+    # 잡 안에서 차례로 실행할 단계의 목록
+    steps:
+      # 단계의 이름(name: 화면에 보일 이름, run: 실제 실행할 명령어)
+      - name: 인사하기
+        run: echo "Hello, Actions! TaskFlow의 첫 워크 플로우입니다."
