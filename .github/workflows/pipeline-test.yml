@@ -1,0 +1,12 @@
+name: 순서 실습
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - run: echo "빌드 단계 실행"
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+        - run: echo "배포 단계 실행"
