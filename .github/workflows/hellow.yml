@@ -2,7 +2,18 @@
 name: Hello Actions
 
 # 실행 시점
-on: push
+on: 
+  # push 이벤트 발생 시 실행
+  push:
+    # 어떤 브랜치에 push될 때 실행할지 지정
+    # branches:
+    #   - main
+    branches: [main]
+    # paths: (path-ignaore와 함께 쓸 수 없음.)
+      # - 'src/**' # src 폴더 안의 모든 파일이 변경될 때 실행
+      # - 'docs/**' # docs 폴더 안의 모든 파일이 변경될 때 실행
+    # paths-ignore:
+      # - 'README.md' # README.md 파일이 변경될 때는 실행하지 않음
 
 # 이 workflow가 가진 잡들의 목록
 jobs:
